@@ -36,3 +36,34 @@
     transform: rotate(360deg);
   }
 }
+
+/* Keep your existing CRA styles, then add: */
+.Title {
+  margin-bottom: 1rem;
+  font-size: 1.6rem;
+}
+
+.ChoiceGroup {
+  display: flex;
+  gap: 1rem;
+  margin-top: 0.5rem;
+}
+
+.ChoiceButton {
+  padding: 0.75rem 1.25rem;
+  font-size: 1rem;
+  border-radius: 9999px;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.05s ease, box-shadow 0.2s ease;
+}
+
+.ChoiceButton:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.2);
+}
+
+.ChoiceNote {
+  margin-top: 1.25rem;
+  opacity: 0.9;
+}
