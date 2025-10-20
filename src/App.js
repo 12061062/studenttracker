@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Routes, Route, useNavigate } from "react-router-dom";
 import "./App.css";
 import Student from "./student/Student";
+import Professor from "./professor/Professor";
 
 function Home() {
   const [choice, setChoice] = useState(null);
@@ -9,6 +10,9 @@ function Home() {
 
   const handleNavigate = () => {
     navigate("/student");
+  };
+  const handleProfNavigate = () => {
+    navigate("/professor");
   };
 
   return (
@@ -25,7 +29,7 @@ function Home() {
           </button>
           <button
             className="ChoiceButton"
-            onClick={() => setChoice("Professor")}
+            onClick={() => { setChoice("Professor"); handleProfNavigate(); }}
           >
             I'm a Professor
           </button>
@@ -46,6 +50,7 @@ export default function App() {
     <Routes>
       <Route path="/" element={<Home />} />
       <Route path="/student" element={<Student />} />
+      <Route path="/professor" element={<Professor />} />
     </Routes>
   );
 }

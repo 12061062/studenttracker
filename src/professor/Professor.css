@@ -1,0 +1,212 @@
+/* -------- Theme tokens -------- */
+:root {
+  --bg: #f6f8fb;
+  --card: #ffffff;
+  --text: #0f172a;
+  --muted: #64748b;
+  --border: #e2e8f0;
+  --primary: #2563eb;
+  --primary-press: #1d4ed8;
+  --success-bg: #ecfdf5;
+  --success-text: #065f46;
+  --danger: #dc2626;
+  --shadow: 0 10px 30px rgba(2, 6, 23, 0.08);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #0b1220;
+    --card: #0f172a;
+    --text: #e5e7eb;
+    --muted: #94a3b8;
+    --border: #1f2937;
+    --primary: #3b82f6;
+    --primary-press: #2563eb;
+    --success-bg: rgba(34,197,94,0.12);
+    --success-text: #34d399;
+    --danger: #ef4444;
+    --shadow: 0 12px 36px rgba(0, 0, 0, 0.35);
+  }
+}
+
+/* -------- Page shell -------- */
+.professor-page {
+  min-height: 100dvh;
+  padding: clamp(16px, 3vw, 40px);
+  background: var(--bg);
+  color: var(--text);
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  display: grid;
+  place-items: start center;
+}
+
+/* -------- Card container -------- */
+.professor-card {
+  width: min(1100px, 100%);
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  box-shadow: var(--shadow);
+  padding: clamp(16px, 2.5vw, 28px);
+}
+
+/* If you didn't wrap content in .professor-card, you can apply to page directly */
+.professor-page > h1,
+.professor-page > .toolbar,
+.professor-page > .table-wrap {
+  width: min(1100px, 100%);
+}
+
+/* -------- Header -------- */
+.professor-page h1 {
+  margin: 0 0 12px;
+  font-size: clamp(1.25rem, 1.2rem + 1.2vw, 2rem);
+  letter-spacing: 0.2px;
+}
+
+.subtitle {
+  color: var(--muted);
+  margin: 0 0 14px;
+}
+
+/* -------- Toolbar (button row) -------- */
+.toolbar {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-bottom: 14px;
+}
+
+/* Button base */
+.professor-page button {
+  appearance: none;
+  border: 1px solid var(--border);
+  background: linear-gradient(180deg, rgba(248,250,252,0.95), rgba(241,245,249,0.9));
+  color: var(--text);
+  padding: 10px 14px;
+  border-radius: 999px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 80ms ease, box-shadow 150ms ease, border-color 150ms ease, background 150ms ease;
+}
+
+@media (prefers-color-scheme: dark) {
+  .professor-page button {
+    background: linear-gradient(180deg, rgba(30,41,59,0.9), rgba(17,24,39,0.9));
+  }
+}
+
+.professor-page button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 10px 24px rgba(2,6,23,0.12);
+  border-color: color-mix(in oklab, var(--border) 60%, var(--primary));
+}
+
+.professor-page button:active { transform: translateY(0); }
+
+button.primary {
+  background: linear-gradient(180deg, var(--primary), var(--primary-press));
+  color: #fff;
+  border-color: transparent;
+}
+button.primary:hover { box-shadow: 0 12px 28px rgba(37, 99, 235, 0.35); }
+
+/* -------- Status text -------- */
+.error {
+  color: var(--danger);
+  font-weight: 600;
+  margin: 6px 0 0;
+}
+
+.success {
+  background: var(--success-bg);
+  color: var(--success-text);
+  border: 1px solid color-mix(in oklab, var(--success-text) 20%, transparent);
+  padding: 8px 12px;
+  border-radius: 10px;
+  display: inline-block;
+  margin-top: 6px;
+}
+
+/* -------- Table wrapper (scroll on small screens) -------- */
+.table-wrap {
+  width: 100%;
+  overflow: auto;
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  background: var(--card);
+}
+
+/* -------- Attendance table -------- */
+.attendance-table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 720px; /* allow horizontal scroll on narrow screens */
+}
+
+.attendance-table thead th {
+  position: sticky;
+  top: 0;
+  background: color-mix(in oklab, var(--card) 70%, #e5eefc);
+  color: var(--text);
+  text-align: left;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  padding: 12px 14px;
+  border-bottom: 1px solid var(--border);
+  z-index: 1;
+}
+
+@media (prefers-color-scheme: dark) {
+  .attendance-table thead th {
+    background: color-mix(in oklab, var(--card) 70%, rgba(59,130,246,0.18));
+  }
+}
+
+.attendance-table td {
+  padding: 12px 14px;
+  border-bottom: 1px solid var(--border);
+  font-size: 0.98rem;
+  white-space: nowrap;
+}
+
+.attendance-table tbody tr:nth-child(even) {
+  background: color-mix(in oklab, var(--card) 90%, var(--bg));
+}
+
+.attendance-table tbody tr:hover {
+  background: color-mix(in oklab, var(--card) 75%, var(--bg));
+}
+
+/* Timestamp column can wrap on smaller screens */
+.attendance-table td:first-child {
+  white-space: normal;
+}
+
+/* -------- Empty state -------- */
+.empty-state {
+  text-align: center;
+  color: var(--muted);
+  padding: 24px 8px;
+}
+
+/* -------- Loading spinner (optional) -------- */
+.spinner {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  border: 3px solid color-mix(in oklab, var(--primary) 30%, transparent);
+  border-top-color: var(--primary);
+  animation: spin 0.8s linear infinite;
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 8px;
+}
+@keyframes spin { to { transform: rotate(360deg); } }
+
+/* -------- Utility spacing -------- */
+.mt-8 { margin-top: 8px; }
+.mt-16 { margin-top: 16px; }
+.mt-24 { margin-top: 24px; }
