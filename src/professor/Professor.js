@@ -1,5 +1,7 @@
 import { useEffect, useState } from "react";
 import "./Professor.css";
+import etsuLogo from "../etsu-logo.png";
+
 
 
 export default function Professor() {
@@ -33,8 +35,12 @@ export default function Professor() {
 
   return (
     <div className="professor-page">
+              <div className="ETSU-banner">
+        <img src={etsuLogo} alt="ETSU logo" />  
+        </div>
+
       <button onClick={() => setShowRecords((s) => !s)}>
-        {showRecords ? "Hide" : "Show"} Attendance Records
+        {showRecords ? "Hide" : "Show"} All Attendance Records
       </button>
 
       {showRecords && (

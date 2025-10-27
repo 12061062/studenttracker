@@ -1,6 +1,7 @@
 import "./Student.css";
 import { useState } from "react";
 import { clockStudent } from "../services/StudentService";
+import etsuLogo from "../etsu-logo.png";
 
 
 export default function Student() {
@@ -42,7 +43,12 @@ export default function Student() {
 
   return (
     <div style={{ textAlign: "center", padding: "3rem" }}>
-      <h1>Student Page</h1>
+
+        <div className="ETSU-banner">
+        <img src={etsuLogo} alt="ETSU logo" />  
+        </div>
+
+        <h1>Student Page</h1>
 
       <textarea
         className="student-textarea"

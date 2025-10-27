@@ -3,6 +3,7 @@ import { Routes, Route, useNavigate } from "react-router-dom";
 import "./App.css";
 import Student from "./student/Student";
 import Professor from "./professor/Professor";
+import etsuLogo from "./etsu-logo.png";
 
 function Home() {
   const [choice, setChoice] = useState(null);
@@ -18,18 +19,28 @@ function Home() {
   return (
     <div className="App">
       <header className="App-header">
+        <div className="ETSU-banner">
+          <img src={etsuLogo} alt="ETSU Logo" className="ETSU-logo" />
+        </div>
+
         <h1 className="Title">Are you a student or a professor?</h1>
 
         <div className="ChoiceGroup" role="group" aria-label="Choose your role">
           <button
-            className="ChoiceButton"
-            onClick={() => { setChoice("Student"); handleNavigate(); }}
+            className="ChoiceButton student"
+            onClick={() => {
+              setChoice("Student");
+              handleNavigate();
+            }}
           >
             I'm a Student
           </button>
           <button
-            className="ChoiceButton"
-            onClick={() => { setChoice("Professor"); handleProfNavigate(); }}
+            className="ChoiceButton professor"
+            onClick={() => {
+              setChoice("Professor");
+              handleProfNavigate();
+            }}
           >
             I'm a Professor
           </button>
