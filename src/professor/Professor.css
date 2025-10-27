@@ -1,120 +1,199 @@
 /* === ETSU THEME INTEGRATION === */
+:root {
+  --etsu-navy: #041e42;
+  --etsu-gold: #ffc72c;
+  --etsu-gold-dark: #d9a400;
+  --text-light: #f8fafc;
+  --text-dark: #031530;
+  --muted: #94a3b8;
+  --shadow: 0 6px 18px rgba(0, 0, 0, 0.4);
+}
+
+/* === Main Layout === */
 .professor-page {
-  background: white;
-  color: #f8fafc;
+  background: linear-gradient(180deg, #ffffff 0%, #f4f4f9 100%);
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   text-align: center;
   padding: 3rem;
   border-radius: 16px;
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.4);
+  box-shadow: var(--shadow);
   max-width: 900px;
   margin: 3rem auto;
-  background-clip: padding-box;
+  color: var(--text-dark);
 }
 
-/* ETSU banner and logo */
+/* === ETSU Banner === */
 .ETSU-banner {
   background: white;
   border-radius: 0.5rem;
   margin-bottom: 1.5rem;
-
   display: flex;
-  justify-content: center; /* center horizontally */
+  justify-content: center;
   align-items: center;
+  gap: 1rem;
 }
 
 .ETSU-banner img {
-  max-height: 70px;
+  max-height: 60px;
   width: auto;
   object-fit: contain;
 }
 
-/* Headings */
+/* === Headings === */
 .professor-page h1,
 .professor-page h2 {
   font-family: "Merriweather", serif;
-  color: black;
-  text-shadow: 0 0 8px rgba(255, 199, 44, 0.15);
+  color: var(--etsu-navy);
+  text-shadow: 0 0 6px rgba(255, 199, 44, 0.15);
+  margin-bottom: 1rem;
 }
 
-/* Buttons */
+/* === Search Section === */
+.professor-search {
+  margin: 1.5rem 0 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.75rem;
+}
+
+/* Input */
+.professor-search input {
+  padding: 0.6rem 0.9rem;
+  border-radius: 8px;
+  border: 2px solid rgba(4, 30, 66, 0.2);
+  background: rgba(255, 255, 255, 0.9);
+  color: var(--text-dark);
+  width: 220px;
+  font-size: 0.95rem;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.professor-search input::placeholder {
+  color: rgba(4, 30, 66, 0.45);
+}
+
+.professor-search input:focus {
+  border-color: var(--etsu-gold);
+  box-shadow: 0 0 0 3px rgba(255, 199, 44, 0.3);
+  outline: none;
+}
+
+/* === Buttons (shared base) === */
+.professor-search button,
 .professor-button {
   appearance: none;
   border: none;
   border-radius: 9999px;
   font-weight: 600;
   letter-spacing: 0.3px;
-  padding: 0.75rem 1.25rem;
-  margin: 0.4rem;
+  padding: 0.7rem 1.2rem;
+  margin: 0.25rem;
   cursor: pointer;
-  color: #f8fafc;
+  color: var(--text-light);
   background: linear-gradient(180deg, #0f2c70, #041e42);
   border: 1px solid rgba(255, 255, 255, 0.15);
-  transition: transform 0.1s ease, box-shadow 0.2s ease;
+  transition: transform 0.1s ease, box-shadow 0.2s ease, background 0.2s ease;
 }
 
+.professor-search button:hover,
 .professor-button:hover {
   transform: translateY(-1px);
   box-shadow: 0 8px 20px rgba(255, 199, 44, 0.25);
 }
 
-/* Table styles to blend with ETSU theme */
+.professor-search button:active,
+.professor-button:active {
+  transform: translateY(0);
+}
+
+/* Primary (Search) button */
+.professor-search button:first-of-type {
+  background: linear-gradient(180deg, var(--etsu-gold), var(--etsu-gold-dark));
+  color: var(--text-dark);
+  border: 1px solid var(--etsu-gold-dark);
+}
+
+.professor-search button:first-of-type:hover {
+  box-shadow: 0 8px 22px rgba(255, 199, 44, 0.45);
+}
+
+/* Clear button (gray neutral look) */
+.professor-search button:nth-of-type(2) {
+  background: #64748b;
+  color: white;
+}
+
+.professor-search button:nth-of-type(2):hover {
+  box-shadow: 0 6px 18px rgba(100, 116, 139, 0.4);
+}
+
+/* Toggle button (third one) */
+.professor-search button:last-of-type {
+  background: linear-gradient(180deg, #0f2c70, #041e42);
+  color: #fff;
+}
+
+/* === Table === */
 .table-wrap {
-  margin: 1.5rem auto;     /* centers the entire block horizontally */
-  width: fit-content;      /* shrink to the table’s natural width */
-  max-width: 100%;         /* prevent overflow */
-  overflow-x: auto;        /* allow scroll on small screens */
+  margin: 1.5rem auto;
+  width: fit-content;
+  max-width: 100%;
+  overflow-x: auto;
 }
 
-/* also center the table itself */
 .attendance-table {
-  margin: 0 auto;          /* centers within wrapper */
   border-collapse: collapse;
-  width: auto;             /* use natural width instead of full width */
+  width: auto;
+  margin: 0 auto;
 }
 
 .attendance-table th {
-  background: var(--etsu-gold, #ffc72c);
-  color: #031530;
-}
-
-/* default rows (odd / not even) */
-.attendance-table tbody tr {
-  background: #fff;
-  color: #000;          /* text black */
-}
-
-/* even rows override */
-.attendance-table tbody tr:nth-child(even) {
-  background: var(--etsu-navy);
-  color: #fff;          /* text white on navy */
-}
-
-/* cells & headers (unchanged) */
-.attendance-table td,
-.attendance-table th {
+  background: var(--etsu-gold);
+  color: var(--etsu-navy);
+  font-weight: 700;
+  padding: 0.75rem 1rem;
   border: 1px solid #ddd;
-  padding: 0.75rem;
+}
+
+.attendance-table td {
+  border: 1px solid #ddd;
+  padding: 0.7rem 1rem;
   text-align: center;
 }
 
-/* optional: make links match row text color */
-.attendance-table a { color: inherit; }
-
-.ETSU-banner {
-  background: white;
-  border-radius: 0.5rem;
-  margin-bottom: 1.5rem;
-
-  display: flex;
-  justify-content: center; /* center horizontally */
-  align-items: center;      /* center vertically (if banner has a height) */
-  gap: 1rem;
+/* Alternate row coloring */
+.attendance-table tbody tr:nth-child(odd) {
+  background: #ffffff;
+  color: var(--text-dark);
 }
 
-.ETSU-banner img {
-  max-height: 50px;
-  width: auto;
-  max-width: 100%;
-  object-fit: contain;
+.attendance-table tbody tr:nth-child(even) {
+  background: var(--etsu-navy);
+  color: #ffffff;
+}
+
+/* === Error & Status Text === */
+.error {
+  color: #b91c1c;
+  font-weight: 600;
+  margin-top: 1rem;
+}
+
+/* === Responsive === */
+@media (max-width: 600px) {
+  .professor-search {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .professor-search input,
+  .professor-search button {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  .attendance-table {
+    font-size: 0.9rem;
+  }
 }
