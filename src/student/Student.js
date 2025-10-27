@@ -1,6 +1,7 @@
 import "./Student.css";
 import { useState } from "react";
 import { clockStudent } from "../services/StudentService";
+import etsuLogo from "../etsu-logo.png";
 
 
 export default function Student() {
@@ -42,7 +43,12 @@ export default function Student() {
 
   return (
     <div style={{ textAlign: "center", padding: "3rem" }}>
-      <h1>Student Page</h1>
+
+        <div className="ETSU-banner">
+        <img src={etsuLogo} alt="ETSU logo" />  
+        </div>
+
+        <h1>Student Page</h1>
 
       <textarea
         className="student-textarea"
@@ -86,16 +92,27 @@ export default function Student() {
 
     const payload = {
       firstName,
-      inOut,
+      inOut: inOut,
       lat: coords?.lat,
       lon: coords?.lon,
     };
+
+    if (!coords || !coords.lat || !coords.lon) {
+      alert("⚠️ Please click 'Get Location' and wait for your location to load before submitting.");
+      return;
+    }
+
+    if (!firstName.trim()) {
+      alert("⚠️ Please enter your first name.");
+      return;
+    }
 
     try {
       const data = await clockStudent(payload);
       console.log("✅ Response from API:", data);
       alert(data.message || "Clock event recorded successfully!");
     } catch (err) {
+      console.error("❌ Error submitting clock data:", err);
       alert("❌ Failed to submit. Check console for details.");
     }
   }}

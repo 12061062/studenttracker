@@ -1,107 +1,116 @@
-/* --------- Theme tokens --------- */
+/* === ETSU Theme Tokens === */
 :root {
-  --bg: #0f172a;           /* slate-900 */
-  --card: #111827;         /* gray-900 */
-  --card-alt: #0b1220;     /* subtle gradient stop */
-  --text: #e5e7eb;         /* gray-200 */
-  --muted: #94a3b8;        /* slate-400 */
-  --primary: #2563eb;      /* blue-600 */
-  --primary-press: #1d4ed8;/* blue-700 */
-  --accent: #22c55e;       /* green-500 */
-  --danger: #ef4444;       /* red-500 */
-  --ring: rgba(37, 99, 235, 0.5);
-  --shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+  --etsu-navy: #041e42;
+  --etsu-gold: #ffc72c;
+  --etsu-gold-dark: #d9a400;
+  --text-light: #f8fafc;
+  --text-muted: #cbd5e1;
+  --bg-dark: #031530;
+  --bg-card: #07214e;
+  --shadow: 0 6px 18px rgba(0, 0, 0, 0.4);
+  --ring: rgba(255, 199, 44, 0.5);
 }
 
-/* Optional nice background */
+p {
+  color: black;
+}
+
+/* === Page Background === */
 body {
-  background: radial-gradient(1200px 800px at 100% -10%, #0b1220 0%, #0f172a 50%, #0b1220 100%);
-  color: var(--text);
+  background: radial-gradient(900px 600px at 80% -20%, #07214e 0%, #041e42 60%, #031530 100%);
+  color: var(--text-light);
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
-/* Centered card feel even though your wrapper has inline styles */
+/* === Main Card === */
 div[style*="text-align: center"][style*="padding"] {
   max-width: 720px;
-  margin: 4rem auto;
+  margin: 3rem auto;
   padding: 2.5rem !important;
-  background: linear-gradient(180deg, var(--card), var(--card-alt));
-  border: 1px solid rgba(148, 163, 184, 0.12);
-  border-radius: 20px;
+  background: white;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
   box-shadow: var(--shadow);
 }
 
-/* Headings */
+/* === Headings === */
 h1 {
-  margin: 0 0 1rem;
-  font-size: clamp(1.6rem, 2vw + 1rem, 2.2rem);
+  margin-bottom: 1rem;
+  font-size: clamp(1.8rem, 2vw + 1rem, 2.4rem);
+  font-weight: 700;
+  color: Black;
+  text-shadow: 0 0 8px rgba(255, 199, 44, 0.15);
   letter-spacing: 0.3px;
+  font-family: "Merriweather", serif;
 }
 
 h2 {
-  margin: 2rem 0 0.75rem;
-  font-size: 1.15rem;
+  margin-top: 2rem;
+  margin-bottom: 0.75rem;
+  font-size: 1.2rem;
   font-weight: 600;
-  color: var(--muted);
+  color: black;
+  font-family: "Merriweather", serif;
 }
 
-/* Textarea (your 'first name' input) */
+/* === Textarea === */
 .student-textarea {
-  width: min(100%, 560px);
-  min-height: 48px;             /* more input-like */
-  max-height: 220px;
+  width: 350px;
+  min-height: 35px;
+  max-height: 35px;
   padding: 0.9rem 1rem;
   margin: 1rem auto 0;
   display: block;
   resize: vertical;
-  border-radius: 12px;
-  border: 1px solid rgba(148, 163, 184, 0.2);
-  background: rgba(2, 6, 23, 0.5);
-  color: var(--text);
+  border-radius: 10px;
+  border: 2px solid rgba(255, 199, 44, 0.2);
+  background: var(--etsu-navy);
+  color: var(--text-light);
   font-size: 1rem;
-  line-height: 1.4;
   outline: none;
-  transition: border-color 150ms ease, box-shadow 150ms ease, transform 80ms ease;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease, transform 0.15s ease;
 }
 
 .student-textarea::placeholder {
-  color: rgba(226, 232, 240, 0.5);
+  color: rgba(255, 255, 255, 0.5);
 }
 
 .student-textarea:focus {
-  border-color: var(--primary);
+  border-color: var(--etsu-gold);
   box-shadow: 0 0 0 4px var(--ring);
   transform: translateY(-1px);
 }
 
-/* Group for the in/out question */
+/* === Question Group === */
 .student-questions {
-  margin-top: 1.25rem;
+  margin-top: 1.5rem;
+  color: black;
+  font-family: "Merriweather", serif;
 }
 
-/* Buttons — shared base */
+/* === Buttons (shared) === */
 .student-button,
 .get-location,
 .student-submit-button {
   appearance: none;
-  border: 1px solid rgba(148, 163, 184, 0.2);
-  background: linear-gradient(180deg, rgba(30, 41, 59, 0.9), rgba(17, 24, 39, 0.9));
-  color: var(--text);
-  padding: 0.7rem 1.15rem;
-  margin: 0.35rem;
+  border: none;
   border-radius: 9999px;
-  font-size: 0.98rem;
   font-weight: 600;
-  letter-spacing: 0.2px;
+  letter-spacing: 0.3px;
+  padding: 0.75rem 1.25rem;
+  margin: 0.4rem;
   cursor: pointer;
-  transition: transform 80ms ease, box-shadow 150ms ease, border-color 150ms ease, background 150ms ease;
+  color: var(--text-light);
+  background: var(--etsu-navy);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  transition: transform 0.1s ease, box-shadow 0.2s ease, background 0.2s ease;
 }
 
 .student-button:hover,
 .get-location:hover,
 .student-submit-button:hover {
   transform: translateY(-1px);
-  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.35);
-  border-color: rgba(148, 163, 184, 0.35);
+  box-shadow: 0 8px 20px rgba(255, 199, 44, 0.25);
 }
 
 .student-button:active,
@@ -110,70 +119,93 @@ h2 {
   transform: translateY(0);
 }
 
-/* Make the two clock options feel like a segmented toggle */
+/* === Clock In/Out Buttons === */
 .student-questions .student-button {
-  min-width: 120px;
-}
-.student-questions .student-button:first-of-type {
-  margin-right: 0.25rem;
-}
-.student-questions .student-button + .student-button {
-  margin-left: 0.25rem;
+  min-width: 130px;
 }
 
-/* Primary call-to-action style for Submit */
+.student-questions .student-button:first-of-type {
+  background: linear-gradient(180deg, var(--etsu-gold), var(--etsu-gold-dark));
+  color: var(--bg-dark);
+  border-color: var(--etsu-gold-dark);
+}
+
+.student-questions .student-button:first-of-type:hover {
+  box-shadow: 0 10px 20px rgba(255, 199, 44, 0.4);
+}
+
+/* === Get Location Button === */
+.get-location {
+  background: linear-gradient(180deg, #0f2c70, #041e42);
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+.get-location:hover {
+  box-shadow: 0 10px 20px rgba(255, 199, 44, 0.25);
+}
+
+/* === Submit Button === */
 .student-submit-button {
-  background: linear-gradient(180deg, var(--primary), var(--primary-press));
+  background: linear-gradient(180deg, var(--etsu-gold), var(--etsu-gold-dark));
+  color: var(--bg-dark);
   border-color: transparent;
 }
+
 .student-submit-button:hover {
-  box-shadow: 0 12px 28px rgba(37, 99, 235, 0.45);
+  box-shadow: 0 10px 22px rgba(255, 199, 44, 0.5);
 }
+
 .student-submit-button:active {
-  filter: saturate(0.95);
+  filter: brightness(0.95);
 }
 
-/* Get Location button: subtle accent when idle; muted when disabled */
-.get-location {
-  background: linear-gradient(180deg, rgba(34, 197, 94, 0.15), rgba(34, 197, 94, 0.08));
-  border-color: rgba(34, 197, 94, 0.25);
-}
-.get-location:hover {
-  box-shadow: 0 10px 24px rgba(34, 197, 94, 0.25);
-}
-.get-location:disabled {
-  opacity: 0.6;
-  cursor: not-allowed;
-  filter: grayscale(10%);
-}
-
-/* Status text right under Get Location button */
+/* === Location Status Text === */
 .get-location + p {
-  margin-top: 0.75rem;
-  color: var(--muted);
+  margin-top: 0.8rem;
+  color: var(--text-muted);
   font-size: 0.95rem;
+  font-style: italic;
 }
 
-/* General paragraph spacing */
+/* === Paragraphs === */
 p {
   margin: 0.75rem 0 0;
 }
 
-/* Small screens */
-@media (max-width: 560px) {
+/* === Responsive === */
+@media (max-width: 600px) {
   div[style*="text-align: center"][style*="padding"] {
     margin: 2rem 1rem;
     padding: 1.5rem !important;
-  }
-
-  .student-textarea {
-    width: 100%;
   }
 
   .student-button,
   .get-location,
   .student-submit-button {
     width: 100%;
-    margin: 0.35rem 0;
+    margin: 0.4rem 0;
   }
+}
+
+.ETSU-banner {
+  background: white;
+  border-radius: 0.5rem;
+  margin-bottom: 1.5rem;
+
+  display: flex;
+  justify-content: center; /* center horizontally */
+  align-items: center;      /* center vertically (if banner has a height) */
+  gap: 1rem;
+}
+
+.ETSU-banner img {
+  max-height: 50px;
+  width: auto;
+  max-width: 100%;
+  object-fit: contain;
+}
+
+/* optional: responsive cap so it shrinks on small screens */
+@media (max-width: 480px) {
+  .ETSU-banner img { max-height: 96px; }
 }

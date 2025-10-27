@@ -1,0 +1,120 @@
+/* === ETSU THEME INTEGRATION === */
+.professor-page {
+  background: white;
+  color: #f8fafc;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  text-align: center;
+  padding: 3rem;
+  border-radius: 16px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.4);
+  max-width: 900px;
+  margin: 3rem auto;
+  background-clip: padding-box;
+}
+
+/* ETSU banner and logo */
+.ETSU-banner {
+  background: white;
+  border-radius: 0.5rem;
+  margin-bottom: 1.5rem;
+
+  display: flex;
+  justify-content: center; /* center horizontally */
+  align-items: center;
+}
+
+.ETSU-banner img {
+  max-height: 70px;
+  width: auto;
+  object-fit: contain;
+}
+
+/* Headings */
+.professor-page h1,
+.professor-page h2 {
+  font-family: "Merriweather", serif;
+  color: black;
+  text-shadow: 0 0 8px rgba(255, 199, 44, 0.15);
+}
+
+/* Buttons */
+.professor-button {
+  appearance: none;
+  border: none;
+  border-radius: 9999px;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+  padding: 0.75rem 1.25rem;
+  margin: 0.4rem;
+  cursor: pointer;
+  color: #f8fafc;
+  background: linear-gradient(180deg, #0f2c70, #041e42);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  transition: transform 0.1s ease, box-shadow 0.2s ease;
+}
+
+.professor-button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 8px 20px rgba(255, 199, 44, 0.25);
+}
+
+/* Table styles to blend with ETSU theme */
+.table-wrap {
+  margin: 1.5rem auto;     /* centers the entire block horizontally */
+  width: fit-content;      /* shrink to the table’s natural width */
+  max-width: 100%;         /* prevent overflow */
+  overflow-x: auto;        /* allow scroll on small screens */
+}
+
+/* also center the table itself */
+.attendance-table {
+  margin: 0 auto;          /* centers within wrapper */
+  border-collapse: collapse;
+  width: auto;             /* use natural width instead of full width */
+}
+
+.attendance-table th {
+  background: var(--etsu-gold, #ffc72c);
+  color: #031530;
+}
+
+/* default rows (odd / not even) */
+.attendance-table tbody tr {
+  background: #fff;
+  color: #000;          /* text black */
+}
+
+/* even rows override */
+.attendance-table tbody tr:nth-child(even) {
+  background: var(--etsu-navy);
+  color: #fff;          /* text white on navy */
+}
+
+/* cells & headers (unchanged) */
+.attendance-table td,
+.attendance-table th {
+  border: 1px solid #ddd;
+  padding: 0.75rem;
+  text-align: center;
+}
+
+/* optional: make links match row text color */
+.attendance-table a { color: inherit; }
+
+.ETSU-banner {
+  background: white;
+  border-radius: 0.5rem;
+  margin-bottom: 1.5rem;
+
+  display: flex;
+  justify-content: center; /* center horizontally */
+  align-items: center;      /* center vertically (if banner has a height) */
+  gap: 1rem;
+}
+
+.ETSU-banner img {
+  max-height: 50px;
+  width: auto;
+  max-width: 100%;
+  object-fit: contain;
+}

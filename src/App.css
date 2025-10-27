@@ -1,71 +1,110 @@
+/* ETSU theme colors */
+:root {
+  --etsu-blue: #041e42;
+  --etsu-gold: #b9975b;
+  --etsu-light: #f5f5f5;
+}
+
+body {
+  margin: 0;
+  background-color: var(--etsu-light);
+  font-family: "Segoe UI", "Merriweather", serif;
+}
+
 .App {
   text-align: center;
-  background-color: #f9fafc;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  font-family: "Segoe UI", Roboto, sans-serif;
-  color: #333;
+  color: var(--etsu-blue);
 }
 
+/* Header Card */
 .App-header {
-  background-color: #ffffff;
+  background-color: #fff;
   padding: 3rem 2rem;
   border-radius: 1rem;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-  max-width: 600px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  max-width: 650px;
   width: 90%;
   text-align: center;
+  border-top: 6px solid var(--etsu-gold);
 }
 
+/* ETSU banner and logo */
+.ETSU-banner {
+  /*background: var(--etsu-blue);*/
+  background: white;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.ETSU-logo {
+  max-width: 240px;
+  height: auto;
+}
+
+/* Title */
 .Title {
   margin-bottom: 1rem;
-  font-size: 1.8rem;
-  color: #2b2b2b;
-  font-weight: 600;
+  font-size: 1.9rem;
+  color: var(--etsu-blue);
+  font-family: "Merriweather", serif;
+  font-weight: 700;
 }
 
+/* Buttons */
 .ChoiceGroup {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
   gap: 1rem;
-  margin-top: 1rem;
+  margin-top: 1.5rem;
 }
 
 .ChoiceButton {
-  padding: 0.75rem 1.75rem;
+  padding: 0.9rem 2rem;
   font-size: 1rem;
   border-radius: 9999px;
-  border: none;
-  background-color: #007bff;
-  color: #fff;
+  border: 2px solid var(--etsu-gold);
+  background-color: var(--etsu-blue);
+  color: white;
   cursor: pointer;
-  font-weight: 500;
-  box-shadow: 0 4px 10px rgba(0, 123, 255, 0.3);
-  transition: all 0.2s ease;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  transition: all 0.3s ease;
 }
 
 .ChoiceButton:hover {
-  background-color: #0056b3;
+  background-color: var(--etsu-gold);
+  color: var(--etsu-blue);
   transform: translateY(-2px);
-  box-shadow: 0 8px 18px rgba(0, 123, 255, 0.3);
 }
 
 .ChoiceButton:active {
-  transform: scale(0.98);
+  transform: scale(0.97);
 }
 
+/* Specific button tones */
+.ChoiceButton.student {
+  background-color: var(--etsu-blue);
+}
+
+.ChoiceButton.professor {
+  background-color: var(--etsu-gold);
+  color: var(--etsu-blue);
+}
+
+/* Choice Note */
 .ChoiceNote {
-  margin-top: 1.5rem;
+  margin-top: 1.8rem;
   font-size: 1.1rem;
-  color: #555;
-  opacity: 0.9;
+  color: #333;
 }
 
-/* Add a smooth fade animation for the note */
 .ChoiceNote strong {
-  color: #007bff;
+  color: var(--etsu-gold);
 }
