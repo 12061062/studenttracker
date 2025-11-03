@@ -209,3 +209,15 @@ p {
 @media (max-width: 480px) {
   .ETSU-banner img { max-height: 96px; }
 }
+
+.student-search {
+  background-color: var(--etsu-gold);
+    color: var(--text-dark);
+  border: 1px solid var(--etsu-gold-dark);
+  border-radius: 9999px;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+  padding: 0.7rem 1.2rem;
+  margin: 0.25rem;
+  cursor: pointer;
+}
