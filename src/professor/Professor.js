@@ -91,7 +91,7 @@ export default function Professor() {
       ),
     ].join("\n");
 
-    // Create a blob and download link
+    // Create a blob and download link for the CSV file.
     const blob = new Blob([csvContent], { type: "text/csv;charset=utf-8;" });
     const url = URL.createObjectURL(blob);
 
