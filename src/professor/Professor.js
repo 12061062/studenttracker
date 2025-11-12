@@ -60,6 +60,54 @@ export default function Professor() {
     setShowRecords(true);
   };
 
+  // ✅ Export to CSV feature
+  const exportToCSV = () => {
+    if (!records.length) {
+      alert("No records available to export!");
+      return;
+    }
+
+    // Define CSV headers
+    const headers = ["Timestamp", "First Name", "Action", "Latitude", "Longitude"];
+    const rows = records.map((r) => [
+      r.timestamp || r.Timestamp,
+      r.firstName || r.FirstName,
+      r.action || r.Action,
+      r.latitude || r.Latitude,
+      r.longitude || r.Longitude,
+    ]);
+
+    // Convert to CSV string
+    const csvContent = [
+      headers.join(","),
+      ...rows.map((row) =>
+        row
+          .map((value) =>
+            value !== undefined && value !== null
+              ? `"${String(value).replace(/"/g, '""')}"`
+              : ""
+          )
+          .join(",")
+      ),
+    ].join("\n");
+
+    // Create a blob and download link
+    const blob = new Blob([csvContent], { type: "text/csv;charset=utf-8;" });
+    const url = URL.createObjectURL(blob);
+
+    const link = document.createElement("a");
+    link.href = url;
+    link.setAttribute(
+      "download",
+      appliedName
+        ? `attendance_${appliedName.replace(/\s+/g, "_")}.csv`
+        : "attendance_records.csv"
+    );
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
+
   return (
     <div className="professor-page">
       <div className="ETSU-banner">
@@ -94,28 +142,34 @@ export default function Professor() {
           )}
 
           {!loading && !error && records.length > 0 && (
-            <table className="attendance-table">
-              <thead>
-                <tr>
-                  <th>Timestamp</th>
-                  <th>First Name</th>
-                  <th>Action</th>
-                  <th>Latitude</th>
-                  <th>Longitude</th>
-                </tr>
-              </thead>
-              <tbody>
-                {records.map((r, i) => (
-                  <tr key={i}>
-                    <td>{r.timestamp || r.Timestamp}</td>
-                    <td>{r.firstName || r.FirstName}</td>
-                    <td>{r.action || r.Action}</td>
-                    <td>{r.latitude || r.Latitude}</td>
-                    <td>{r.longitude || r.Longitude}</td>
+            <>
+              <button onClick={exportToCSV} className="export-button">
+                Export to CSV
+              </button>
+
+              <table className="attendance-table">
+                <thead>
+                  <tr>
+                    <th>Timestamp</th>
+                    <th>First Name</th>
+                    <th>Action</th>
+                    <th>Latitude</th>
+                    <th>Longitude</th>
                   </tr>
-                ))}
-              </tbody>
-            </table>
+                </thead>
+                <tbody>
+                  {records.map((r, i) => (
+                    <tr key={i}>
+                      <td>{r.timestamp || r.Timestamp}</td>
+                      <td>{r.firstName || r.FirstName}</td>
+                      <td>{r.action || r.Action}</td>
+                      <td>{r.latitude || r.Latitude}</td>
+                      <td>{r.longitude || r.Longitude}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </>
           )}
         </>
       )}
