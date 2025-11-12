@@ -81,7 +81,8 @@
 
 /* === Buttons (shared base) === */
 .professor-search button,
-.professor-button {
+.professor-button,
+.export-button {
   appearance: none;
   border: none;
   border-radius: 9999px;
