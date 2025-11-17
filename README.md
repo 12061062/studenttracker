@@ -2,6 +2,14 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+Must have Node.js installed, it can be installed at https://nodejs.org/ (recommended version Node 18+)
+This installs:
+
+React
+React DOM
+Your fetch API utilities
+Any other dependencies in package.json
+
 ## Available Scripts
 
 In the project directory, you can run:
