@@ -1,0 +1,5 @@
+Version: 1.0.0
+Release Date: 11/24/25
+New Features: Adding search capabilities and buttons to improve usability on the application.
+Deliverables: Completing all 
+Known Bugs: One known bug revolved around the professor searching for a student by name, finding that student, and clicking clear. Instead of clearing the search bar, it displays all the students who clocked in.
