@@ -24,9 +24,6 @@ Login issues
 Missing timestamps or incorrect attendance
 
 # **Summary of the Developers Manual**
-
-The Developer Manual includes:
-
 ### Development Environment & Setup
 Instructions for installing Node.js, running the React frontend, and running the .NET backend.
 ### Glossary of Terms
