@@ -115,5 +115,14 @@ Several design decisions were made to keep the system simple, portable, and easy
 On the frontend, React was chosen to provide a clean and responsive interface with minimal complexity. State hooks are used to manage user input, form validation, and API results, which keeps component logic easy to follow. API calls are abstracted into service functions for reuse and clarity. The UI design follows ETSU-inspired colors to maintain a consistent and recognizable look for users. These decisions prioritize clarity, maintainability, and ease of understanding for developers who may work on the project later.
 
 
+
+# **Project Management Tool**
+Our team used a Jira board to manage tasks and track progress throughout the project. Jira allowed us to create user stories, assign tasks, monitor workflow status, and maintain clear visibility on project milestones. This helped ensure efficient collaboration and organized task management across all development phases.
+
+
+
+# **Build and Deployment Procedure**
+The application is built using standard Node.js tooling. To build the project, install dependencies with npm install and run npm run build. Deployment involves uploading the generated build output to the target hosting environment and ensuring environment variables are configured properly.
+
 # **Video Demonstration Link**
 https://youtu.be/wJjV91utq9M
