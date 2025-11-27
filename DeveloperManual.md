@@ -1,4 +1,4 @@
-Glossary of Important Terms
+**Glossary of Important Terms**
 
 API (Application Programming Interface)
 A set of rules that allows different software components to communicate. In this project, the React frontend communicates with the .NET backend through API endpoints.
