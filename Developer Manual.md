@@ -109,5 +109,11 @@ URL: http://localhost:5118/api/professor/attendance/Jason
 
 
 
+# **Logic and Rationale**
+Several design decisions were made to keep the system simple, portable, and easy to maintain. The use of a CSV file instead of a database allows the application to run without any external dependencies, making it ideal for classroom environments or small-scale deployments. Each attendance entry is appended to the file with a timestamp to preserve an immutable record of student activity. The separation between controllers and processor classes in the backend ensures that business logic remains isolated from HTTP request handling, improving readability and making future changes easier.
+
+On the frontend, React was chosen to provide a clean and responsive interface with minimal complexity. State hooks are used to manage user input, form validation, and API results, which keeps component logic easy to follow. API calls are abstracted into service functions for reuse and clarity. The UI design follows ETSU-inspired colors to maintain a consistent and recognizable look for users. These decisions prioritize clarity, maintainability, and ease of understanding for developers who may work on the project later.
+
+
 # **Video Demonstration Link**
 https://youtu.be/wJjV91utq9M
