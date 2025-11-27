@@ -1,55 +1,51 @@
-# API URL can be found at: https://github.com/12061062/StudentTrackerAPI
+# **Overview**
 
-# Getting Started with Create React App
+The Student Attendance Tracking System is a full-stack web application that allows students to clock in/out with GPS verification and enables professors to view, search, and retrieve attendance records. It uses a React frontend and a .NET 8 Web API backend, storing all data in a lightweight CSV file.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# **Summary of the User Manual**
+### Student Features
 
-Must have Node.js installed, it can be installed at https://nodejs.org/ (recommended version Node 18+)
-This installs:
+Clock In / Clock Out with timestamp and location
+View personal attendance summary
+Download timesheet data
 
-React
-React DOM
-Your fetch API utilities
-Any other dependencies in package.json
+### Professor Features
 
-## Available Scripts
+View all attendance records
+Search by student name
+Generate downloadable reports
+Review individual student logs and timestamps
 
-In the project directory, you can run:
+### Troubleshooting
 
-### `npm start`
+Fixing unresponsive buttons
+Search not showing results
+Login issues
+Missing timestamps or incorrect attendance
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+# **Summary of the Developers Manual**
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+The Developer Manual includes:
 
-## Learn More
+### Development Environment & Setup
+Instructions for installing Node.js, running the React frontend, and running the .NET backend.
+### Glossary of Terms
+Short definitions for API, endpoints, frontend, backend, services, CSV, JSON, and more.
+### Coding Standards
+Naming conventions, React component patterns, API structuring, and error-handling rules.
+### Data Dictionary
+Tables describing the fields used in StudentClockRequest and AttendanceRecord.
+### Testing Reports
+Example Postman tests and sample formatted backend responses.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+# **Logic & Rationale**
+Why CSV storage, React hooks, and backend service separation were chosen.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+# **Project Management Tools**
+Mention of Jira use for tracking progress and tasks.
 
-### Code Splitting
+# **Build & Deployment Procedure**
+Basic build commands for the frontend and backend.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+# **Video Demonstration Link**
+A link to the final video walkthrough of the system.
