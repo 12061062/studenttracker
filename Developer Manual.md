@@ -2,7 +2,7 @@
 This project is set up into two directories, the frontend and backend. 
 API URL can be found at: https://github.com/12061062/StudentTrackerAPI
 
-**Frontend**
+### **Frontend**
 
 The front end utilizes the React framework, a JavaScript library. To run this project, you must have Node.js installed. It can be installed at https://nodejs.org/ (recommended version Node 18+). This installs React, React DOM, your fetch API utilities, and any other dependencies in package.json. Once installed, in the project directory, you can run: 
 
@@ -10,7 +10,7 @@ npm start
 
 Which runs the app in development mode. If it doesn’t open automatically, open http://localhost:3000 in your browser to view it. The page will reload when you make changes locally. You may also see any lint errors in the console.
 
-**Backend**
+### **Backend**
 
 Before running, ensure .NET SDK 8.0+ is installed, which can be downloaded at: https://dotnet.microsoft.com/en-us/download/dotnet/8.0. Once installed, in the project directory, you can run:
 dotnet restore
