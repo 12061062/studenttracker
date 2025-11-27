@@ -106,3 +106,8 @@ URL: http://localhost:5118/api/student/clock
 
 URL: http://localhost:5118/api/professor/attendance/Jason
 [{"timestamp":"2025-10-22 10:40:43","firstName":"Jason","action":"Clock In","latitude":"36.30533","longitude":"-82.37104"},{"timestamp":"2025-10-22 10:42:27","firstName":"Jason","action":"Clock Out","latitude":"36.30532","longitude":"-82.37104"},{"timestamp":"2025-11-05 10:36:06","firstName":"Jason","action":"Clock In","latitude":"36.30534","longitude":"-82.37105"},{"timestamp":"2025-11-17 10:44:07","firstName":"Jason","action":"Clock In","latitude":"36.30533","longitude":"-82.37104"},{"timestamp":"2025-11-17 11:53:34","firstName":"Jason","action":"Clock In","latitude":"36.30000","longitude":"-82.37000"}]
+
+
+
+# **Video Demonstration Link**
+https://youtu.be/wJjV91utq9M
