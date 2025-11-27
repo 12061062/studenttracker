@@ -40,6 +40,5 @@ Why CSV storage, React hooks, and backend service separation were chosen.
 Mention of Jira use for tracking progress and tasks.
 ### **Build & Deployment Procedure**
 Basic build commands for the frontend and backend.
-
-# **Video Demonstration Link**
+### **Video Demonstration Link**
 A link to the final video walkthrough of the system.
