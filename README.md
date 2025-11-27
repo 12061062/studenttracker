@@ -37,14 +37,11 @@ Naming conventions, React component patterns, API structuring, and error-handlin
 Tables describing the fields used in StudentClockRequest and AttendanceRecord.
 ### Testing Reports
 Example Postman tests and sample formatted backend responses.
-
-# **Logic & Rationale**
+### **Logic & Rationale**
 Why CSV storage, React hooks, and backend service separation were chosen.
-
-# **Project Management Tools**
+### **Project Management Tools**
 Mention of Jira use for tracking progress and tasks.
-
-# **Build & Deployment Procedure**
+### **Build & Deployment Procedure**
 Basic build commands for the frontend and backend.
 
 # **Video Demonstration Link**
