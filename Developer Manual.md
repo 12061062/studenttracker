@@ -73,3 +73,24 @@ Frontend React components follow a functional component style with hooks (useSta
 The backend follows standard .NET conventions, including PascalCase for class and method names, camelCase for parameters and variables, and organizing business logic within service classes rather than controllers. Error handling is included to prevent failed operations from crashing the system, and JSON data models follow consistent property naming.
 
 Together, these standards help keep the project clean, organized, and easy for future developers to understand and extend.
+
+
+
+# **Data Dictionary**
+
+StudentClockRequest (API Input)
+| Field       | Type    | Description                                   |
+| ----------- | ------- | --------------------------------------------- |
+| `firstName` | string  | The student's first name. Required.           |
+| `inOut`     | boolean | `true` = Clock In, `false` = Clock Out.       |
+| `lat`       | number  | GPS latitude provided by the student device.  |
+| `lon`       | number  | GPS longitude provided by the student device. |
+
+AttendanceRecord (CSV Storage Format)
+| Column      | Type   | Description                                                 |
+| ----------- | ------ | ----------------------------------------------------------- |
+| `Timestamp` | string | Date and time the event was recorded (YYYY-MM-DD HH:mm:ss). |
+| `FirstName` | string | The student's first name.                                   |
+| `Action`    | string | “Clock In” or “Clock Out”.                                  |
+| `Latitude`  | string | Latitude value stored as text.                              |
+| `Longitude` | string | Longitude value stored as text.                             |
