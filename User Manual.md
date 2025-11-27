@@ -1,5 +1,5 @@
 # **User Manual**
-Student
+## Student
 
 Students use the Student Tracker system to clock in, clock out, and view their attendance summary.
 
@@ -57,7 +57,7 @@ Your full personal attendance/timesheet summary will appear on the screen.
 If desired, you may download the generated CSV file.
 
 
-Professor
+## Professor
 
 Professors and instructors use the system to generate reports for students and view aggregated attendance data. 
 
@@ -139,7 +139,7 @@ Any missing entries
 
 Reports are available to download as CSV files.
 
-Common Troubleshooting Instances
+# Common Troubleshooting Instances
 
 Instance 1: The Clock In or Clock Out button does not respond
 Possible Causes:
@@ -172,7 +172,7 @@ The system is still filtering the list.
 Network delay or high system use.
 
 
-Solutions:
+## Solutions:
 Try typing the first few letters of the student's name.
 
 
@@ -191,7 +191,7 @@ The account type does not match the login portal (Student vs. Professor).
 Session expired.
 
 
-Solutions:
+## Solutions:
 Re-enter your login credentials carefully.
 
 
@@ -215,7 +215,7 @@ The browser may have been closed before confirmation.
 Time zone settings differ.
 
 
-Solutions:
+## Solutions:
 Double-check that you fully completed both Clock In and Clock Out actions.
 
 
