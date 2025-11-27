@@ -62,3 +62,14 @@ The data format used to send information between the frontend and backend.
 
 **State:**
 Information stored in React components that updates the UI when changed (e.g., search input, student location, attendance results).
+
+
+
+# **Coding Standards**
+All code in this project follows common industry best practices to ensure readability, maintainability, and consistency. Descriptive and meaningful variable names are used throughout both the frontend and backend to clearly indicate purpose and intent. Code is organized into logical modules—React components for UI, services for API communication, and controllers and processors for backend logic—to support separation of concerns.
+
+Frontend React components follow a functional component style with hooks (useState, useEffect) for state management. JSX is formatted consistently with proper indentation, and CSS classes follow a clear naming convention. API calls are centralized in service files to avoid duplication.
+
+The backend follows standard .NET conventions, including PascalCase for class and method names, camelCase for parameters and variables, and organizing business logic within service classes rather than controllers. Error handling is included to prevent failed operations from crashing the system, and JSON data models follow consistent property naming.
+
+Together, these standards help keep the project clean, organized, and easy for future developers to understand and extend.
