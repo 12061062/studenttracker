@@ -96,6 +96,11 @@ AttendanceRecord (CSV Storage Format)
 | `Longitude` | string | Longitude value stored as text.                             |
 
 
+# **Architecture Model/Design**
+<img width="630" height="416" alt="image" src="https://github.com/user-attachments/assets/56d0ae97-89b2-44c7-b2f4-da7be57fa539" />
+
+# **Detailed Design**
+<img width="598" height="795" alt="image" src="https://github.com/user-attachments/assets/983a8738-7e06-4824-9a41-9af46a81e969" />
 
 # **Testing Reports**
 Postman was used to test the functionality of the submissions. It was also used to test the endpoints for retrieving the records by name and getting all records.
