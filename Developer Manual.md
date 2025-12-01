@@ -101,12 +101,18 @@ AttendanceRecord (CSV Storage Format)
 Postman was used to test the functionality of the submissions. It was also used to test the endpoints for retrieving the records by name and getting all records.
 
 Testing Reports:
+Student Submission
 URL: http://localhost:5118/api/student/clock
 <img width="748" height="467" alt="PostmanSubmission" src="https://github.com/user-attachments/assets/1c1b7148-10fe-4f17-8288-54cbb35616c5" />
 
-
-URL: http://localhost:5118/api/professor/attendance/Jason
+Retrieve all Records
+URL: http://localhost:5118/api/professor/attendance/
 <img width="747" height="463" alt="PostmanAttendance" src="https://github.com/user-attachments/assets/b5026c21-be10-4658-828f-40264e28aed6" />
+
+Retrieve Records by Name:
+URL: http://localhost:5118/api/professor/attendance/<Name>
+<img width="748" height="466" alt="image" src="https://github.com/user-attachments/assets/559701e6-a5f4-4402-a42a-a6970e632eb4" />
+
 
 
 
