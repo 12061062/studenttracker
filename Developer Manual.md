@@ -75,6 +75,75 @@ The backend follows standard .NET conventions, including PascalCase for class an
 Together, these standards help keep the project clean, organized, and easy for future developers to understand and extend.
 
 
+# **Development Standards**
+
+1. General Practices
+
+Write clear, readable code with meaningful variable, function, and component names.
+
+Keep functions and components small and focused on a single responsibility.
+
+Prefer consistency over cleverness – follow existing patterns already used in the project.
+
+Add comments only where logic is non-obvious; don’t comment what the code already clearly states.
+
+2. Git & Branching
+
+Use a feature-branch workflow:
+
+main (or master) stays stable.
+
+Create branches like:
+feature/student-page, feature/professor-search, bugfix/api-endpoint.
+
+Write descriptive commit messages, e.g.:
+Add professor search by name endpoint instead of fix stuff.
+
+Make small, focused commits and avoid mixing unrelated changes.
+
+3. Frontend (React) Standards
+
+Use functional components and React hooks (useState, useEffect) instead of class components.
+
+Keep API calls in separate service files (e.g., studentService, professorService) rather than inside components.
+
+Use controlled inputs when possible (track values with state instead of querying the DOM).
+
+Name components with PascalCase (e.g., Student, Professor), and CSS classes with descriptive names (professor-page, attendance-table).
+
+Handle loading and error states for all API calls (e.g., loading, error state flags).
+
+4. Backend (.NET API) Standards
+
+Follow PascalCase for classes and methods, camelCase for local variables and parameters.
+
+Keep controllers thin: controllers handle HTTP and delegate logic to processor/service classes.
+
+Group related logic in services/processors (e.g., StudentProcessor, ProfessorProcessor) rather than controllers.
+
+Return clear, consistent HTTP responses:
+
+200 OK with JSON on success
+
+400 BadRequest for invalid input
+
+404 NotFound when data doesn’t exist
+
+When reading/writing the CSV file, handle errors safely and log meaningful messages.
+
+5. Testing & Verification
+
+Test API endpoints with Postman or Swagger before wiring them up to the frontend.
+
+After changes, verify:
+
+Student can still clock in/out successfully.
+
+Professor can still view all records and search by name.
+
+Check the CSV file format after backend changes to ensure fields and order stay consistent.
+
+
 
 # **Data Dictionary**
 
