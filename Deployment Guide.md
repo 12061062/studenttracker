@@ -59,7 +59,7 @@ Application started. Press Ctrl+C to shut down.
 The app writes the CSV file to the current user’s Downloads folder as:
 StudentClockRecords.csv
 
-If you want to host the API on another server or port (e.g. behind IIS or a reverse proxy), configure the URL/port in your hosting setup and update the frontend API URL to match.
+If you want to host the API on another server or port (ex., behind IIS or a reverse proxy), configure the URL/port in your hosting setup and update the frontend API URL to match.
 
 
 
@@ -105,7 +105,7 @@ Make sure:
 
 The frontend is reachable at something like http://your-frontend-url
 
-The frontend API URLs point to the backend (e.g. http://your-backend-url:5118)
+The frontend API URLs point to the backend (ex., http://your-backend-url:5118)
 
 
 
