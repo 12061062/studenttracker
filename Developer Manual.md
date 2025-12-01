@@ -103,6 +103,8 @@ Postman was used to test the functionality of the submissions. It was also used 
 Testing Reports:
 URL: http://localhost:5118/api/student/clock
 {"message":"Clock event recorded successfully.","received":{"firstName":"Zack","inOut":true,"lat":36.3,"lon":-82.37,"timestamp":"2025-11-24T16:23:01.1702216Z"}}
+<img width="748" height="467" alt="PostmanSubmission" src="https://github.com/user-attachments/assets/1c1b7148-10fe-4f17-8288-54cbb35616c5" />
+
 
 URL: http://localhost:5118/api/professor/attendance/Jason
 [{"timestamp":"2025-10-22 10:40:43","firstName":"Jason","action":"Clock In","latitude":"36.30533","longitude":"-82.37104"},{"timestamp":"2025-10-22 10:42:27","firstName":"Jason","action":"Clock Out","latitude":"36.30532","longitude":"-82.37104"},{"timestamp":"2025-11-05 10:36:06","firstName":"Jason","action":"Clock In","latitude":"36.30534","longitude":"-82.37105"},{"timestamp":"2025-11-17 10:44:07","firstName":"Jason","action":"Clock In","latitude":"36.30533","longitude":"-82.37104"},{"timestamp":"2025-11-17 11:53:34","firstName":"Jason","action":"Clock In","latitude":"36.30000","longitude":"-82.37000"}]
