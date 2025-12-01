@@ -8,6 +8,8 @@ Backend: ASP.NET Core Web API (StudentTrackerAPI) that reads/writes a CSV file
 
 For the system to work, both must be running and the frontend must point to the correct API URL.
 
+
+
 1. Prerequisites
 
 Before deployment or running in a new environment, ensure:
@@ -19,6 +21,8 @@ Download: https://nodejs.org
 .NET SDK 8.0+ is installed
 
 Download: https://dotnet.microsoft.com/en-us/download/dotnet/8.0
+
+
 
 2. Backend Deployment (.NET API)
 2.1 Build / Publish the API
@@ -37,6 +41,8 @@ Builds the API in Release mode
 
 Outputs the deployable files into the publish folder
 
+
+
 2.2 Run the API
 
 From the publish folder:
@@ -50,10 +56,12 @@ Now listening on: http://localhost:5118
 Application started. Press Ctrl+C to shut down.
 
 
-⚠️ The app writes the CSV file to the current user’s Downloads folder as:
+The app writes the CSV file to the current user’s Downloads folder as:
 StudentClockRecords.csv
 
 If you want to host the API on another server or port (e.g. behind IIS or a reverse proxy), configure the URL/port in your hosting setup and update the frontend API URL to match.
+
+
 
 3. Frontend Deployment (React App)
 3.1 Install Dependencies
@@ -61,6 +69,8 @@ If you want to host the API on another server or port (e.g. behind IIS or a reve
 From the frontend project folder:
 
 npm install
+
+
 
 3.2 Configure API URL (if needed)
 
@@ -71,11 +81,15 @@ http://localhost:5118/api/...
 
 If you deploy the backend to a different URL (for example, https://yourserver.com), update the API base URLs in your frontend service files (e.g. StudentService, ProfessorService) or use an environment variable (e.g. REACT_APP_API_BASE_URL).
 
+
+
 3.3 Build the Frontend
 npm run build
 
 
 This creates an optimized production build in a build folder.
+
+
 
 3.4 Host the Frontend
 
@@ -92,6 +106,8 @@ Make sure:
 The frontend is reachable at something like http://your-frontend-url
 
 The frontend API URLs point to the backend (e.g. http://your-backend-url:5118)
+
+
 
 4. Final Verification Checklist
 
