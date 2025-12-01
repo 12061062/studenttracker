@@ -96,11 +96,6 @@ AttendanceRecord (CSV Storage Format)
 | `Longitude` | string | Longitude value stored as text.                             |
 
 
-# **Architecture Model/Design**
-<img width="630" height="416" alt="image" src="https://github.com/user-attachments/assets/56d0ae97-89b2-44c7-b2f4-da7be57fa539" />
-
-# **Detailed Design**
-<img width="598" height="795" alt="image" src="https://github.com/user-attachments/assets/983a8738-7e06-4824-9a41-9af46a81e969" />
 
 # **Testing Reports**
 Postman was used to test the functionality of the submissions. It was also used to test the endpoints for retrieving the records by name and getting all records.
@@ -120,6 +115,14 @@ URL: http://localhost:5118/api/professor/attendance/<Name>
 
 
 
+# **Project Management Tool/Issue Tracking Tool**
+Our team used a Jira board to manage tasks/issues and track progress throughout the project. Jira allowed us to create user stories, assign tasks, monitor workflow status, and maintain clear visibility on project milestones. This helped ensure efficient collaboration and organized task management across all development phases.
+
+
+
+# **Build and Deployment Procedure**
+The application is built using standard Node.js tooling. To build the project, install dependencies with npm install and run npm run build. Deployment involves uploading the generated build output to the target hosting environment and ensuring environment variables are configured properly.
+
 
 
 # **Logic and Rationale**
@@ -128,14 +131,54 @@ Several design decisions were made to keep the system simple, portable, and easy
 On the frontend, React was chosen to provide a clean and responsive interface with minimal complexity. State hooks are used to manage user input, form validation, and API results, which keeps component logic easy to follow. API calls are abstracted into service functions for reuse and clarity. The UI design follows ETSU-inspired colors to maintain a consistent and recognizable look for users. These decisions prioritize clarity, maintainability, and ease of understanding for developers who may work on the project later.
 
 
+# **Troubleshooting Guide**
+Common Troubleshooting Instances
 
-# **Project Management Tool/Issue Tracking Tool**
-Our team used a Jira board to manage tasks/issues and track progress throughout the project. Jira allowed us to create user stories, assign tasks, monitor workflow status, and maintain clear visibility on project milestones. This helped ensure efficient collaboration and organized task management across all development phases.
+Instance 1: The Clock In or Clock Out button does not respond
+Possible Causes:
+- The internet connection is unstable.
+- The page has not fully loaded.
+- The browser is blocking location permissions (if location is used).
+Solutions:
+- Refresh the page and try again.
+- Ensure you have a stable internet connection.
+- When prompted, allow the browser to access your device’s location.
+- Try a different browser (Chrome recommended).
 
+Instance 2: The professor’s search bar is slow or shows no results
+Possible Causes:
+- The name is misspelled or incomplete.
+- The system is still filtering the list.
+- Network delay or high system use.
+Solutions:
+- Try typing the first few letters of the student's name.
+- Wait a moment—results should appear within a short time.
+- Make sure your internet connection is stable.
 
+Instance 3: I cannot log in to my account
+Possible Causes:
+- Incorrect username or password.
+- The account type does not match the login portal (Student vs. Professor).
+- Session expired.
+Solutions:
+- Re-enter your login credentials carefully.
+- Ensure you are using the correct login page.
+- Clear browser cache and try again.
+- Contact the system administrator if the issue persists.
 
-# **Build and Deployment Procedure**
-The application is built using standard Node.js tooling. To build the project, install dependencies with npm install and run npm run build. Deployment involves uploading the generated build output to the target hosting environment and ensuring environment variables are configured properly.
+Instance 4: The attendance times seem incorrect or missing
+Possible Causes:
+- You may have forgotten to clock in or clock out.
+- The browser may have been closed before confirmation.
+- Time zone settings differ.
+Solutions:
+- Double-check that you fully completed both Clock In and Clock Out actions.
+- Wait a moment for the system to process the timestamp.
+- Ensure your device time and timezone are configured correctly.
+
+Known Bugs/Issues:
+- There is one known bug: when the professor is looking at the attendance records for one user after searching, and they click “clear”, the records are shown for all users. If the user presses “clear” again, then everything is cleared. 
+
 
 # **Video Demonstration Link**
 https://youtu.be/wJjV91utq9M
