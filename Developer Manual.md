@@ -147,6 +147,7 @@ Possible Causes:
 - The internet connection is unstable.
 - The page has not fully loaded.
 - The browser is blocking location permissions (if location is used).
+  
 Solutions:
 - Refresh the page and try again.
 - Ensure you have a stable internet connection.
@@ -158,6 +159,7 @@ Possible Causes:
 - The name is misspelled or incomplete.
 - The system is still filtering the list.
 - Network delay or high system use.
+  
 Solutions:
 - Try typing the first few letters of the student's name.
 - Wait a moment—results should appear within a short time.
@@ -168,6 +170,7 @@ Possible Causes:
 - Incorrect username or password.
 - The account type does not match the login portal (Student vs. Professor).
 - Session expired.
+  
 Solutions:
 - Re-enter your login credentials carefully.
 - Ensure you are using the correct login page.
@@ -179,6 +182,7 @@ Possible Causes:
 - You may have forgotten to clock in or clock out.
 - The browser may have been closed before confirmation.
 - Time zone settings differ.
+  
 Solutions:
 - Double-check that you fully completed both Clock In and Clock Out actions.
 - Wait a moment for the system to process the timestamp.
