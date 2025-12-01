@@ -1,3 +1,9 @@
+# **Team Members**
+ - Daniel Foister
+ - Jason Gun
+ - Timyathus Spikes
+ - Tyrese Dickson
+
 # **Overview**
 
 The Student Attendance Tracking System is a full-stack web application that allows students to clock in/out with GPS verification and enables professors to view, search, and retrieve attendance records. It uses a React frontend and a .NET 8 Web API backend, storing all data in a lightweight CSV file.
