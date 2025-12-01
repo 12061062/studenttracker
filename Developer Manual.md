@@ -116,8 +116,8 @@ On the frontend, React was chosen to provide a clean and responsive interface wi
 
 
 
-# **Project Management Tool**
-Our team used a Jira board to manage tasks and track progress throughout the project. Jira allowed us to create user stories, assign tasks, monitor workflow status, and maintain clear visibility on project milestones. This helped ensure efficient collaboration and organized task management across all development phases.
+# **Project Management Tool/Issue Tracking Tool**
+Our team used a Jira board to manage tasks/issues and track progress throughout the project. Jira allowed us to create user stories, assign tasks, monitor workflow status, and maintain clear visibility on project milestones. This helped ensure efficient collaboration and organized task management across all development phases.
 
 
 
