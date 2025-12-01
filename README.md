@@ -36,15 +36,23 @@ Instructions for installing Node.js, running the React frontend, and running the
 Short definitions for API, endpoints, frontend, backend, services, CSV, JSON, and more.
 ### Coding Standards
 Naming conventions, React component patterns, API structuring, and error-handling rules.
+### Development Standards
+Standards/processes for the team's project development.
 ### Data Dictionary
 Tables describing the fields used in StudentClockRequest and AttendanceRecord.
+### Architecture Model/Design
+Architecture Diagram.
+### Detailed Design
+Class Model Diagram.
 ### Testing Reports
 Example Postman tests and sample formatted backend responses.
-### **Logic & Rationale**
-Why CSV storage, React hooks, and backend service separation were chosen.
-### **Project Management Tools**
-Mention of Jira use for tracking progress and tasks.
+### **Project Management/Issue Tracking Tool**
+Mention of Jira use for tracking progress, issues, and tasks.
 ### **Build & Deployment Procedure**
 Basic build commands for the frontend and backend.
+### **Logic & Rationale**
+Why CSV storage, React hooks, and backend service separation were chosen.
+### Troubleshooting Guide
+Common troubleshooting instances and known bugs/issues.
 ### **Video Demonstration Link**
 A link to the final video walkthrough of the system.
